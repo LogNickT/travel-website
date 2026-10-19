@@ -24,3 +24,5 @@
  #journal{padding:24px 20px 45px}#journal h1{font-size:clamp(34px,9vw,46px);overflow-wrap:anywhere}.journal-grid{gap:24px;margin-top:28px}.place,.story,.flight{padding:22px}.place-guide{font-size:14px;padding:8px 0;min-height:44px}#back,.primary{min-height:44px}dialog{padding:25px;max-height:88dvh;overflow:auto}.close{min-width:44px;min-height:44px}footer{gap:16px;padding-bottom:30px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+.controls button span{font-size:12px}@media(max-width:850px){#rotate{display:none}.controls{gap:14px}.controls button{padding:12px 20px;min-height:48px}.place:focus-within{outline:2px solid #8fae8c}}
