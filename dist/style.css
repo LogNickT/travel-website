@@ -7,3 +7,20 @@
 #hover{right:auto;top:0;left:0;z-index:5;background:#fffef8;border:1px solid #dce5d7;border-radius:14px;padding:12px 18px;box-shadow:0 8px 24px #334f5026;color:#364c50;font-size:14px;font-weight:600;white-space:nowrap;pointer-events:none}#hover:after{content:"";position:absolute;left:15px;bottom:-7px;width:12px;height:12px;background:#fffef8;border-right:1px solid #dce5d7;border-bottom:1px solid #dce5d7;transform:rotate(45deg)}
 
 .place-guide{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;text-decoration:underline;text-underline-offset:4px}.place-guide:hover{color:#476d55}
+
+/* Mobile: normal document flow, scroll-safe globe and reachable touch targets. */
+@media(max-width:850px){
+ header{height:72px;padding:0 20px;gap:12px}.brand{font-size:30px}.soft{min-height:44px;padding:10px 16px;font-size:13px}
+ .intro{padding:26px 22px 0}.intro h1{font-size:clamp(30px,7.5vw,42px);line-height:1.16;letter-spacing:-1.3px}.intro p{font-size:14px;line-height:1.6;max-width:360px;margin:14px auto 0}.intro .eyebrow{letter-spacing:1.7px}
+ .earth-stage{height:auto;padding:0 0 22px;display:flex;flex-direction:column;overflow:visible;background:radial-gradient(ellipse at 50% 30%,#e4f0f7,transparent 65%)}
+ #globe{position:relative;inset:auto;width:100%;height:clamp(280px,90vw,390px);flex:none;order:0;touch-action:pan-y pinch-zoom}
+ #loading{top:130px;font-size:12px;max-width:85%;text-align:center}
+ .controls{position:relative;left:auto;bottom:auto;transform:none;align-self:center;order:1;gap:2px;padding:4px;margin:0 10px;border:1px solid #e1e8e3;max-width:calc(100% - 24px);flex-wrap:wrap;justify-content:center}
+ .controls button{min-height:44px;min-width:44px;padding:10px 12px;font-size:12px}#interact{background:#e0ead6}#interact[aria-pressed=true]{background:#c6d9e9}
+ .hint{position:relative;bottom:auto;order:2;padding:13px 20px 16px;font-size:11px;line-height:1.5;color:#61797d}
+ .floating{position:relative;inset:auto;order:3;width:auto;margin:0 18px;padding:20px;border-radius:20px;background:#fffffff0}.floating h2{display:block;font-size:24px;margin:10px 0}.floating p{font-size:14px;margin:6px 0 14px}
+ .floating input,label input,label select,label textarea{font-size:16px;min-height:48px}#results{max-height:210px;overscroll-behavior-y:auto}#results button{min-height:44px;font-size:14px;padding:12px}#coverage{font-size:11px;margin-top:10px}
+ .bottom{margin:10px 18px 35px;gap:12px}.bottom>div{padding:10px 2px}.destination{min-height:120px;padding:20px}.destination strong{margin:10px 0}.destination span{font-size:13px}
+ #journal{padding:24px 20px 45px}#journal h1{font-size:clamp(34px,9vw,46px);overflow-wrap:anywhere}.journal-grid{gap:24px;margin-top:28px}.place,.story,.flight{padding:22px}.place-guide{font-size:14px;padding:8px 0;min-height:44px}#back,.primary{min-height:44px}dialog{padding:25px;max-height:88dvh;overflow:auto}.close{min-width:44px;min-height:44px}footer{gap:16px;padding-bottom:30px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
