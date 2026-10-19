@@ -64,7 +64,7 @@ ctx.putImageData(pixels,0,0);for(const d of countries)draw(ctx,d,'rgba(0,0,0,0)'
 
 
 const visitedBase=document.createElement('canvas');visitedBase.width=width;visitedBase.height=height;const visitedPaint=visitedBase.getContext('2d');
-function rebuildVisitedBase(){visitedPaint.clearRect(0,0,width,height);visitedPaint.drawImage(base,0,0);for(const d of countries)if(visited.has(name(d)))draw(visitedPaint,d,'#69f52b');}
+function rebuildVisitedBase(){visitedPaint.clearRect(0,0,width,height);visitedPaint.drawImage(base,0,0);for(const d of countries)if(visited.has(name(d)))draw(visitedPaint,d,'#a4ff70');}
 rebuildVisitedBase();
 const live=document.createElement('canvas');live.width=width;live.height=height;const paint=live.getContext('2d');paint.drawImage(visitedBase,0,0);
 globe=Globe({rendererConfig:{antialias:true,powerPreference:'high-performance'}})($('#globe')).backgroundColor('#00000000').globeImageUrl(base.toDataURL()).showAtmosphere(true).atmosphereColor('#b4d3e4').atmosphereAltitude(.025);
@@ -119,4 +119,5 @@ function renderVisitedList(){const entries=visited.all().filter(n=>countries.som
 $('#visitedButton').onclick=()=>{renderVisitedList();$('#visitedDialog').showModal();};
 $('#beenHere').onchange=event=>{if(!selected)return;try{visited.set(name(selected),event.target.checked);$('#visitedStatus').textContent=event.target.checked?'Added to your visited countries.':'Removed from your visited countries.';repaintVisited();renderVisitedList();}catch{event.target.checked=visited.has(name(selected));$('#visitedStatus').textContent='Could not save your selection. Please enable browser storage and try again.';}};
 window.addEventListener('storage',event=>{if(event.key==='atlas-visited-v1'||event.key===null){visited.reload();repaintVisited();renderVisitedList();if(selected)$('#beenHere').checked=visited.has(name(selected));}});
+
 
